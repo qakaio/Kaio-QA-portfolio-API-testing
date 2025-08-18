@@ -1,0 +1,24 @@
+{
+  "name": "api-testing-portfolio",
+  "version": "1.0.0",
+  "description": "API testing portfolio using Playwright + TypeScript with JSONPlaceholder API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:report": "npx playwright test --reporter=html"
+  },
+  "keywords": [
+    "QA",
+    "API Testing",
+    "Playwright",
+    "Portfolio",
+    "TypeScript"
+  ],
+  "author": "Kaio Rampz",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "typescript": "^5.6.2",
+    "ts-node": "^10.9.2"
+  }
+}
