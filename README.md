@@ -56,10 +56,10 @@ api-testing-portfolio/
    File name: @qakaio - JSONPlaceholder API.postman_collection.json
    ```
 
-1. Launch the Postman app.
+1. Launch the Postman app
 
 2. Import the Collection
 
 3. Click Import → File → Select JSON file → Open
 
-4. The collection will appear in your Postman sidebar.
+4. The collection will appear in your Postman sidebar
