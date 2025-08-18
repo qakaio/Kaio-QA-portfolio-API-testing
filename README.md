@@ -2,6 +2,8 @@
 
 This project demonstrates **API testing** using **Postman** and **Playwright + TypeScript** with the public [JSONPlaceholder](https://jsonplaceholder.typicode.com) API.
 
+Built by [Kaio Garcia](https://github.com/qakaio) as part of my QA Automation portfolio.
+
 <img src="Test run screenshot - Passed.png"></img>
 <img src="Passed - Postman.png"></img>
 
