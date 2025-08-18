@@ -29,8 +29,8 @@ api-testing-portfolio/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/kaio-rampz/api-testing-portfolio.git
-   cd api-testing-portfolio
+   git clone https://github.com/qakaio/Kaio-QA-portfolio-API-testing.git
+   cd Kaio-QA-portfolio-API-testing
    ```
 
 2. Install dependencies:
