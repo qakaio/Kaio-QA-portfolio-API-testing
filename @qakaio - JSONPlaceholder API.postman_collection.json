@@ -1,0 +1,575 @@
+{
+	"info": {
+		"_postman_id": "b91e5d37-b8fd-47c9-9514-f9a3607777a0",
+		"name": "@qakaio - JSONPlaceholder API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29049445"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GET /users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if status code is 200",
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"// Check if response is an array (if applicable)",
+									"pm.test('Response is an array', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(Array.isArray(jsonData)).to.be.true;",
+									"});",
+									"// Check response time is below 500ms",
+									"pm.test('Response time is less than 500ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /users/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/{{userId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Kaio\", \"username\": \"kaio_r\", \"email\": \"kaio@example.com\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /users/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Kaio Updated\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/{{userId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /users/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/{{userId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "GET /posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if status code is 200",
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"// Check if response is an array (if applicable)",
+									"pm.test('Response is an array', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(Array.isArray(jsonData)).to.be.true;",
+									"});",
+									"// Check response time is below 500ms",
+									"pm.test('Response time is less than 500ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /posts/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/posts/{{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts",
+								"{{postId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /posts?userId=:userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/posts?userId={{userId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "{{userId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /posts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"My first API test post\", \"body\": \"This is the body of the test post\", \"userId\": 1}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /posts/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Updated Post Title\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/posts/{{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts",
+								"{{postId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /posts/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/posts/{{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posts",
+								"{{postId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "GET /comments",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if status code is 200",
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"// Check if response is an array (if applicable)",
+									"pm.test('Response is an array', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(Array.isArray(jsonData)).to.be.true;",
+									"});",
+									"// Check response time is below 500ms",
+									"pm.test('Response time is less than 500ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/comments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /comments?postId=:postId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/comments?postId={{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "{{postId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"postId\": 1, \"name\": \"Test Comment\", \"email\": \"kaio@example.com\", \"body\": \"This is a test comment\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/comments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todos",
+			"item": [
+				{
+					"name": "GET /todos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if status code is 200",
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"// Check if response is an array (if applicable)",
+									"pm.test('Response is an array', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(Array.isArray(jsonData)).to.be.true;",
+									"});",
+									"// Check response time is below 500ms",
+									"pm.test('Response time is less than 500ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/todos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /todos/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/todos/{{todoId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"todos",
+								"{{todoId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Albums",
+			"item": [
+				{
+					"name": "GET /albums",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if status code is 200",
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"// Check if response is an array (if applicable)",
+									"pm.test('Response is an array', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(Array.isArray(jsonData)).to.be.true;",
+									"});",
+									"// Check response time is below 500ms",
+									"pm.test('Response time is less than 500ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/albums",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /albums/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/albums/{{albumId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"albums",
+								"{{albumId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://jsonplaceholder.typicode.com",
+			"type": "string"
+		},
+		{
+			"key": "userId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "postId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "commentId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "todoId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "albumId",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
