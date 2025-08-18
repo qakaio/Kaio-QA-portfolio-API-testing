@@ -51,3 +51,15 @@ api-testing-portfolio/
    Then open the `test-report/index.html` file in your browser.
 
 ---
+## ▶️ Download the Postman Collection
+   ```bash
+   File name: @qakaio - JSONPlaceholder API.postman_collection.json
+   ```
+Open Postman
+Launch the Postman app.
+
+Import the Collection
+
+Click Import → File → Select JSON file → Open
+
+The collection will appear in your Postman sidebar.
