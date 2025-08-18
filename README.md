@@ -2,6 +2,8 @@
 
 This project demonstrates **API testing** using **Playwright + TypeScript** with the public [JSONPlaceholder](https://jsonplaceholder.typicode.com) API.
 
+<img src="Test run screenshot - Passed.png"></img>
+
 ## 🚀 Features
 - Manual API tests (Postman Collection)
 - Automated API tests (Playwright)
