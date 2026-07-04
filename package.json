@@ -1,24 +1,46 @@
 {
-  "name": "api-testing-portfolio",
+  "name": "kaio-qa-portfolio-api-testing",
   "version": "1.0.0",
-  "description": "API testing portfolio using Playwright + TypeScript with JSONPlaceholder API",
-  "main": "index.js",
-  "scripts": {
-    "test": "npx playwright test",
-    "test:report": "npx playwright test --reporter=html"
+  "description": "API testing portfolio using Playwright + TypeScript and Postman, targeting JSONPlaceholder public API.",
+  "author": "Kaio Garcia <kaioqa@protonmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qakaio/Kaio-QA-portfolio-API-testing.git"
+  },
+  "homepage": "https://github.com/qakaio/Kaio-QA-portfolio-API-testing",
+  "bugs": {
+    "url": "https://github.com/qakaio/Kaio-QA-portfolio-API-testing/issues"
   },
   "keywords": [
-    "QA",
-    "API Testing",
-    "Playwright",
-    "Portfolio",
-    "TypeScript"
+    "api-testing",
+    "playwright",
+    "typescript",
+    "postman",
+    "jsonplaceholder",
+    "ci-cd",
+    "github-actions"
   ],
-  "author": "Kaio Rampz",
-  "license": "MIT",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:ci": "playwright test --retries=2 --trace=on-first-retry",
+    "install:browsers": "playwright install --with-deps",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.47.2",
-    "typescript": "^5.6.2",
-    "ts-node": "^10.9.2"
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
+    "typescript": "^5.4.0",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
