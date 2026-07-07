@@ -1,28 +1,27 @@
 # API Testing Portfolio — Playwright + TypeScript + Postman
 
-Complete API testing demonstration using **Playwright + TypeScript** for automated tests and **Postman** for manual/exploratory testing, targeting the public [JSONPlaceholder](https://jsonplaceholder.typicode.com) API.
-
-Built by [Kaio Garcia](https://github.com/qakaio) — QA Engineer
-
----
-
-## 📊 Project Overview
-
 ![Playwright Tests](https://github.com/qakaio/Kaio-QA-portfolio-API-testing/actions/workflows/api-tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-| Aspect | |
-| Aspect | Details | ||
-|--------|---------||
-| **Target API** | JSONPlaceholder (public REST API) | |
-| **Automated Framework** | Playwright + TypeScript | |
-| **Manual Collection** | Postman Collection v2.1 | |
-| **Resources Tested** | Users, Posts, Comments, Todos, Albums, Photos | |
-| **CI/CD** | GitHub Actions workflow included | |
+Complete API testing demonstration using **Playwright + TypeScript** for automated tests and **Postman** for manual/exploratory testing, targeting the public [JSONPlaceholder](https://jsonplaceholder.typicode.com) API.
+
+Built by [Kaio Garcia](https://github.com/qakaio) — Senior QA Engineer
 
 ---
 
-## 🚀 Features
+## Project Overview
+
+| Aspect | Details |
+|--------|---------|
+| **Target API** | JSONPlaceholder (public REST API) |
+| **Automated Framework** | Playwright + TypeScript |
+| **Manual Collection** | Postman Collection v2.1 |
+| **Resources Tested** | Users, Posts, Comments, Todos, Albums, Photos |
+| **CI/CD** | GitHub Actions workflow included |
+
+---
+
+## Features
 
 | Feature | Implementation |
 |---------|----------------|
@@ -35,7 +34,7 @@ Built by [Kaio Garcia](https://github.com/qakaio) — QA Engineer
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Category | Technology |
 |----------|------------|
@@ -48,7 +47,7 @@ Built by [Kaio Garcia](https://github.com/qakaio) — QA Engineer
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Kaio-QA-portfolio-API-testing/
@@ -73,22 +72,22 @@ Kaio-QA-portfolio-API-testing/
 
 ---
 
-## ✅ Test Coverage
+## Test Coverage
 
 | Resource | Tests | Patterns Covered |
 |----------|-------|------------------|
-| **Users** | 12 tests | GET/POST/PUT/DELETE, 404 handling, schema validation |
-| **Posts** | 15 tests | CRUD, user-post relationship, comments linkage |
-| **Comments** | 10 tests | CRUD, post-comment relationship |
-| **Todos** | 8 tests | CRUD, completion toggle |
-| **Albums/Photos** | 10 tests | Nested resources, album-photo relationship |
-| **Contract Testing** | 6 tests | JSON Schema validation, response structure |
+| **Users** | 12 | GET/POST/PUT/DELETE, 404 handling, schema validation |
+| **Posts** | 15 | CRUD, user-post relationship, comments linkage |
+| **Comments** | 10 | CRUD, post-comment relationship |
+| **Todos** | 8 | CRUD, completion toggle |
+| **Albums/Photos** | 10 | Nested resources, album-photo relationship |
+| **Contract Testing** | 6 | JSON Schema validation, response structure |
 
 **Total: 57 automated tests** + 50+ Postman requests
 
 ---
 
-## 🛠 How to Run
+## How to Run
 
 ### Prerequisites
 - Node.js v18+
@@ -96,11 +95,8 @@ Kaio-QA-portfolio-API-testing/
 
 ### Installation
 ```bash
-# 1. Clone the repository
 git clone https://github.com/qakaio/Kaio-QA-portfolio-API-testing.git
 cd Kaio-QA-portfolio-API-testing
-
-# 2. Install dependencies
 npm install
 ```
 
@@ -124,7 +120,7 @@ npx playwright show-report
 
 ---
 
-## 📊 CI/CD Pipeline (GitHub Actions)
+## CI/CD Pipeline (GitHub Actions)
 
 | Workflow | Status |
 |----------|--------|
@@ -140,13 +136,13 @@ npx playwright show-report
 
 ---
 
-## 📄 License
+## License
 
 MIT License — Feel free to use as reference for your own portfolio.
 
 ---
 
-## 👤 Author
+## Author
 
-**Kaio Garcia** — QA Engineer  
+**Kaio Garcia** — Senior QA Engineer  
 🔗 [GitHub](https://github.com/qakaio) • [LinkedIn](https://linkedin.com/in/kaioqa) • [Portfolio](https://qakaio.github.io)
