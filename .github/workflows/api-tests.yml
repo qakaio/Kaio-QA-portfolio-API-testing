@@ -94,6 +94,7 @@ jobs:
           publish_dir: ./allure-report
           destination_dir: allure-report
           keep_files: true
+          force_orphan: true
 
   lint:
     name: Lint
@@ -126,3 +127,4 @@ jobs:
           publish_dir: ./playwright-report
           destination_dir: .
           keep_files: true
+          force_orphan: true
