@@ -19,7 +19,8 @@
     "postman",
     "jsonplaceholder",
     "ci-cd",
-    "github-actions"
+    "github-actions",
+    "allure-report"
   ],
   "scripts": {
     "test": "playwright test",
@@ -28,6 +29,7 @@
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
     "test:ci": "playwright test --retries=2 --trace=on-first-retry",
+    "test:allure": "playwright test --reporter=line,allure-playwright",
     "install:browsers": "playwright install --with-deps",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
@@ -37,6 +39,7 @@
     "@types/node": "^24.0.3",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
+    "allure-playwright": "^3.0.0",
     "eslint": "^9.0.0",
     "typescript": "^5.4.0",
     "typescript-eslint": "^8.62.1"
