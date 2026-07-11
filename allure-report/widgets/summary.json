@@ -1,1 +1,1 @@
-{"reportName":"Kaio-QA-portfolio-API-testing - Playwright API Testing","testRuns":[],"statistic":{"failed":0,"broken":0,"skipped":0,"passed":18,"unknown":0,"total":18},"time":{"start":1783770238549,"stop":1783770239397,"duration":848,"minDuration":20,"maxDuration":443,"sumDuration":1263}}
+{"reportName":"Kaio-QA-portfolio-API-testing - Playwright API Testing","testRuns":[],"statistic":{"failed":0,"broken":0,"skipped":0,"passed":18,"unknown":0,"total":18},"time":{"start":1783770263272,"stop":1783770264091,"duration":819,"minDuration":16,"maxDuration":460,"sumDuration":1260}}
