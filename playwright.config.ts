@@ -1,12 +1,14 @@
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: "./tests", // Directory containing test files
-  timeout: 30 * 1000, // Global timeout for each test (30s)
+  testDir: "./tests",
+  timeout: 30 * 1000,
   expect: {
-    timeout: 5000, // Timeout for expect conditions (5s)
+    timeout: 5000,
   },
-  reporter: [["list"], ["html", { outputFolder: "test-report" }]], // CLI + HTML report
+  reporter: process.env.CI
+    ? [["list"], ["html", { outputFolder: "test-report" }], ["allure-playwright", { outputFolder: "allure-results", detail: true, categories: ["passed", "failed", "broken", "skipped"] }]]
+    : [["list"], ["html", { outputFolder: "test-report" }], ["allure-playwright", { outputFolder: "allure-results", detail: true, categories: ["passed", "failed", "broken", "skipped"] }]],
   use: {
     baseURL: "https://jsonplaceholder.typicode.com",
     extraHTTPHeaders: {
