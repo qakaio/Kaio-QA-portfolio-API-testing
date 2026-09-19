@@ -8,6 +8,31 @@ Complete API testing demonstration using **Playwright + TypeScript** for automat
 
 Built by [Kaio Garcia](https://github.com/qakaio) — Senior QA Engineer
 
+## 60-second start
+
+- Purpose: API contract validation and CRUD checks against the public JSONPlaceholder service.
+- Prerequisites: Node.js 18+, npm.
+- Install: `npm ci`.
+- One test command: `npx playwright test tests/users.spec.ts --project=chromium`.
+- Expected result: the user-resource checks pass and the response schema is validated without guessing.
+- Report command: `npx playwright show-report` or `npx allure generate allure-results --clean -o allure-report`.
+
+## Getting Started
+
+```text
+Kaio-QA-portfolio-API-testing
+├── tests/                 # API contract and CRUD validation suites
+├── .github/workflows/     # CI pipeline with Allure and Pages output
+├── playwright.config.ts   # API test runtime configuration
+├── package.json           # scripts for local and CI execution
+├── package-lock.json      # reproducible dependency contract
+├── tsconfig.json          # TypeScript project settings
+├── README.md              # repo overview and runbook
+└── reports/               # generated HTML and Allure output
+```
+
+This repository focuses on maintainable API testing patterns: request setup, assertion quality, and contract validation without over-claiming broad product coverage.
+
 ---
 
 ## Project Overview
@@ -79,7 +104,7 @@ CRUD, relationship, error-handling, and response-validation scenarios. The
 Postman collection provides complementary exploratory coverage for the same
 public API.
 
-**Total: 57 automated tests** + 50+ Postman requests
+The suite focuses on realistic CRUD and response-validation checks for the public JSONPlaceholder API, with the Postman collection serving as a complementary manual and exploratory companion. The strongest value here is the consistent, maintainable API-contract testing pattern rather than inflated counts.
 
 ---
 
