@@ -59,16 +59,11 @@ Kaio-QA-portfolio-API-testing/
 │   ├── posts.spec.ts           # Posts CRUD + relationships
 │   ├── comments.spec.ts        # Comments CRUD
 │   ├── todos.spec.ts           # Todos CRUD
-│   ├── albums.spec.ts          # Albums + Photos
-│   └── api-contract.spec.ts    # Schema validation tests
-├── postman/
-│   └── @qakaio - JSONPlaceholder API.postman_collection.json
-├── utils/
-│   ├── api-client.ts           # Reusable API client wrapper
-│   ├── test-data.ts            # Test data generators
-│   └── schema-validator.ts     # JSON Schema validation
+│   └── albums.spec.ts           # Albums + Photos
+├── @qakaio - JSONPlaceholder API.postman_collection.json
 ├── playwright.config.ts        # Playwright configuration
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
 ├── .github/workflows/
 │   └── api-tests.yml           # CI/CD pipeline (Allure + Pages)
@@ -79,14 +74,10 @@ Kaio-QA-portfolio-API-testing/
 
 ## Test Coverage
 
-| Resource | Tests | Patterns Covered |
-|----------|-------|------------------|
-| **Users** | 12 | GET/POST/PUT/DELETE, 404 handling, schema validation |
-| **Posts** | 15 | CRUD, user-post relationship, comments linkage |
-| **Comments** | 10 | CRUD, post-comment relationship |
-| **Todos** | 8 | CRUD, completion toggle |
-| **Albums/Photos** | 10 | Nested resources, album-photo relationship |
-| **Contract Testing** | 6 | JSON Schema validation, response structure |
+The suite exercises users, posts, comments, todos, albums, and photos through
+CRUD, relationship, error-handling, and response-validation scenarios. The
+Postman collection provides complementary exploratory coverage for the same
+public API.
 
 **Total: 57 automated tests** + 50+ Postman requests
 
